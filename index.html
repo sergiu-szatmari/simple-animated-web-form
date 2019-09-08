@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/ec31b626e1.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Simple Animated Web Form</title>
+</head>
+<body>
+
+    <form autocomplete="off">
+        <div class="field-status inactivestatus">
+            <i class="fas fa-times"></i>
+            <p>Status</p>
+        </div>
+        <div class="field-name active">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" id="usernameinput" required />
+            <i class="fas fa-arrow-down"></i>
+        </div>
+        <div class="field-email inactive">
+            <i class="far fa-envelope"></i>
+            <input type="email" placeholder="Email" required />
+            <i class="fas fa-arrow-down"></i>
+        </div>
+        <div class="field-password inactive">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required />
+            <i class="fas fa-arrow-down"></i>
+        </div>
+        <div class="field-final inactive">
+            <i class="fas fa-heart"></i>
+            <p>Thanks</p>
+            <i class="fas fa-heart"></i>
+        </div>
+    </form>
+    
+    <script src="app.js"></script>
+</body>
+</html>

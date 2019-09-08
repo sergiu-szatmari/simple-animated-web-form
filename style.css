@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: rgb(87, 189, 130);
+    transition: background 0.5s ease;
+    position: relative;
+}
+
+.field-name,
+.field-email,
+.field-password,
+.field-final {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.field-status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    height: 50px;
+    width: 400px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.field-status i {
+    padding: 10px;
+}
+
+.field-name i,
+.field-email i,
+.field-password i,
+.field-final i {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.field-name input,
+.field-email input,
+.field-password input {
+    background: none;
+    border: none;
+    flex: 1;
+    height: 100%;
+    outline: none;
+}
+
+.field-final {
+    cursor: pointer;
+}
+
+@keyframes hearts {
+    0% {
+        transform: scale(5)
+    }
+    50% {
+        transform: scale(10);
+    }
+    100% {
+        transform: scale(20);
+    }
+}
+
+.fa-arrow-down {
+    animation: arrow-back-animation 1s ease;
+}
+
+.fa-arrow-down:hover {
+    animation: next-slide-animation 0.5s ease;
+    transform: rotate(-90deg);
+}
+@keyframes next-slide-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+@keyframes arrow-back-animation {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% { 
+        transform: rotate(0deg);
+    }
+}
+
+div.inactive {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 50%);
+}
+
+div.inactivestatus {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+div.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+
+div.activestatus {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -150%);
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes shakeplace {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.7) rotate(25deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes status-shake {
+    0% {
+        /* transform: translate(-50%, -50%) rotate(0deg); */
+        transform: translate(-50%, -100%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -150%) rotate(-10deg);
+    }
+    100% {
+        transform: translate(-50%, -150%) rotate(0deg);
+    }
+}
+
+@keyframes unlock {
+    0% {
+        transform: scaleY(1.6);
+        transform: scaleX(1.3);
+    }
+    50% {
+        transform: scaleY(1.8);
+        transform: scaleX(1.6);
+    }
+    100% {
+        transform: scaleY(3.0);
+        /* transform: scale(2.8); */
+    }
+}
